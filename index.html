@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Of Any Number</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+      function multiplyNumbers() {
+        //Select Table;
+        var table = document.getElementById("number").value;
+
+        //Select Multplication Start?
+        var start = document.getElementById("start").value;
+
+        //Select Multplication End?
+        var end = document.getElementById("end").value;
+        var a = parseInt(start);
+        var b = parseInt(end);
+
+        //store the results
+        var results = "";
+
+        for (i = a; i <= b; i++) {
+          result = table * i;
+          results += table + " x " + i + " = " + result + "\n";
+        }
+
+        document.getElementById("resultContainer").innerText = results;
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Table Of Any Number</h1>
+    <div class="table">
+      <input type="number" name="" id="number" placeholder="Enter The Number" />
+      <input type="number" name="" id="start" placeholder="From" />
+      <span>To</span>
+      <input type="number" name="" id="end" placeholder="From" />
+    </div>
+    <div class="container">
+      <button onclick="multiplyNumbers()">Multiply</button>
+    </div>
+    <div id="resultContainer"></div>
+  </body>
+</html>
